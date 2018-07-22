@@ -1,8 +1,12 @@
 *.iml
 .gradle
+.DS_Store
+.externalNativeBuild
+__pycache__/
+
 Client/local.properties
 Client/.idea/*
-.DS_Store
 Client/build
 Client/captures
-.externalNativeBuild
+
+Server/.idea/*
