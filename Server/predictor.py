@@ -1,5 +1,5 @@
 import numpy as np
-import  tensorflow as tf
+import tensorflow as tf
 
 from PIL import Image
 from keras.applications.resnet50 import preprocess_input
@@ -21,5 +21,4 @@ def predict(bytes):
 
     with graph.as_default():
         preds = model.predict(image_data)
-        most_likely_label = decode_predictions(preds, top=1)
-        return 'hotdog' if most_likely_label[0][0][1] == 'hotdog' else 'not a hotdog'
+        return decode_predictions(preds, top=1)[0]

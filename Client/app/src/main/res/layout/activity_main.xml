@@ -2,19 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:paddingBottom="16dp"
-    android:paddingTop="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
     android:orientation="vertical"
     android:weightSum="10">
 
+    <TextView
+        android:id="@+id/resultTxt"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_weight="1"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="16dp" />
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_weight="9"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent" />
-
+        android:layout_height="fill_parent"
+        android:layout_weight="8"
+        android:background="@android:color/background_dark"/>
 
     <Button
         android:id="@+id/btnCamera"
@@ -22,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@android:color/holo_red_dark"
-        android:onClick="btnOnClick"
+        android:onClick="takeAPhoto"
         android:text="Take a photo"
         android:textColor="@android:color/white" />
 

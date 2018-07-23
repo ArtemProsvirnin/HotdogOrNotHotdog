@@ -8,7 +8,7 @@ def post_image(img_file):
     content_type = 'image/jpeg'
     headers = { 'content-type': content_type }
 
-    response = requests.post('http://0.0.0.0:5000/predict', data=img, headers=headers)
+    response = requests.post('http://127.0.0.1:5000/predict', data=img, headers=headers)
 
     print(response.text)
 
